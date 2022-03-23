@@ -1,29 +1,12 @@
-# README #
+# 测试后台 #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+自动化接口测试（自动化生成报告）
 
-### What is this repository for? ###
+mock平台（支持移动设备）
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+### 使用文档 ###
+接口自动化（自动化生成报告）
+![image](https://www.lgstatic.com/i/image6/M01/7B/54/Cgp9HWI7M-qAAKuxAA-RLHtTjzE260.png)
 
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+mock平台（自动化生成报告）
+![image](https://www.lgstatic.com/i/image6/M00/7A/DA/CioPOWI4qiKAenyoAAzhVIIfnug978.png)
