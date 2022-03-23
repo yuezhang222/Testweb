@@ -1,0 +1,44 @@
+version: "3"
+services:
+  pacer.test.com:
+    build:
+     ./
+    command:
+     python manage.py runserver 0.0.0.0:8080
+    ports:
+      - 28080:8080
+      - 27777:7777
+    image:
+      zhangyue/pacer_test:latest
+    container_name: pacer.test.com
+    environment:
+      MYSQLLINK: mysql
+      REDISLINK: redis
+    volumes:
+      - ./static:/code/static
+      - ./testapi/case:/code/testapi/case
+      - ./testapi/migrations/:/code/testapi/migrations
+
+  mysql:
+    image:
+      mysql:5.7
+    container_name: test_mysql
+    ports:
+      - 3307:3306
+    environment:
+#      MYSQL_USER: "root"
+      MYSQL_ROOT_PASSWORD: "123456"
+    volumes:
+     - /Volumes/mysql/data:/var/lib/mysql
+
+  redis:
+    image:
+      redis:5.0
+    container_name: test_redis
+    ports:
+    - 6377:6379
+    volumes:
+      - /Volumes/myredis:/code/redis
+      #       - /Volumes/myredis:/code/redis
+    command:
+      redis-server --requirepass test123 --appendonly yes
